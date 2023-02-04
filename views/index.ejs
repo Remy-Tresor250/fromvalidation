@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/index.css">
+    <title>Home</title>
+</head>
+<body>
+    <section id="container">
+        <div class="profile-pic">
+            <img src="<%dbUserData[0].image%>" alt="profile">
+        </div>
+        <div class="details">
+            <h2 class="username" name="username"><%= dbUserData[0].names %></h2>
+            <h3 class="email" name="email"><%= dbUserData[0].email %></h3>
+            <h4 class="description"><%= dbUserData[0].description %></h4>
+            <form action="/home" method="post" enctype="multipart/form-data">
+                <div class="upload-profile"><label>Upload profile</label><input type="file" name="image" id="profile_pic"></div>
+                <div class="change-username"><label>Change username?</label><input type="text" name="newUsername" id="newUsername" class="change-profile"></div>
+                <div><input type="submit" value="Apply changes" class="submit"></div>
+            </form>
+        </div>
+    </section>
+    <script src="../home.js"></script>
+</body>
+</html>
