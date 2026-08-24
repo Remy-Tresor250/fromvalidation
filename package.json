@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "nodemon server.js",
-    "start": "nodemon home.js"
+    "build": "node init && nodemon server.js",
+    "start": "node init && nodemon home.js"
   },
   "keywords": [],
   "author": "",
